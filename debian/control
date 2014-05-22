@@ -1,0 +1,22 @@
+Source: foo
+Section: utils
+Priority: extra
+Maintainer: Michael Prokop <mika@debian.org>
+Build-Depends: debhelper (>= 5)
+Standards-Version: 3.9.5
+
+Package: foo-ce
+Architecture: all
+Depends: ${misc:Depends},
+         ${shlibs:Depends}
+Conflicts: foo-pro
+Description: demo package for CE
+ whatever :)
+
+Package: foo-pro
+Architecture: all
+Depends: ${misc:Depends},
+         ${shlibs:Depends}
+Conflicts: foo-ce
+Description: demo package for PRO
+ whatever :)
